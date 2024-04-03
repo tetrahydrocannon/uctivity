@@ -50,12 +50,18 @@ export default {
 </script>
 
 <style>
+body {
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
 .eisenhower-matrix {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   height: 50vh; /* Occupy 50% of the viewport height */
+  padding: 10px 10px 10px 20px; /* Add padding on all sides, with extra padding on the left */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .quadrant {
@@ -63,8 +69,9 @@ export default {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  height: calc(50vh / 2 - 10px); /* Set fixed height for quadrants */
-  width: calc(50vw - 20px); /* Set fixed width for quadrants */
+  height: calc(50vh / 2 - 20px); /* Adjust height for padding */
+  width: calc(50vw - 50px); /* Adjust width for padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .quadrant-header {
