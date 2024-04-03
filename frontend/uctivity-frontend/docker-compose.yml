@@ -8,5 +8,3 @@ services:
       - '8080:8080'
     volumes:
       - ./:/app
-    command: 'yarn serve'
-    # command: 'npm run serve' # for NPM manager
